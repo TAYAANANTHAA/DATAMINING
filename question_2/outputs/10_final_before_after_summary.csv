@@ -1,0 +1,3 @@
+version,average_candidates,p95_candidates,p99_candidates,maximum_candidates,same_pair_candidate_recall,different_pair_survival_rate
+baseline,1137.994,2351.0499999999993,2635.01,3256,0.7885304659498208,0.2286634460547504
+high_frequency_filter,2.133,7.0,8.0,8,0.8315412186379928,0.0

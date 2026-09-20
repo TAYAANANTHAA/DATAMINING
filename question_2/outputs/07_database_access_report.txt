@@ -1,0 +1,20 @@
+DATABASE ACCESS-PATH REPORT
+
+Database file: outputs\dedup.db
+Notices stored: 12000
+LSH bucket rows stored: 960000
+Stable opportunity IDs: 12000
+LSH-bucket insertion time (seconds): 40.04
+
+Chosen lookup path:
+80 B-tree point lookups on (band_no, bucket_hash),
+followed by union and de-duplication of returned notice IDs.
+
+Sample notice: N000001
+Bucket rows returned: 452
+Unique candidate notices: 367
+Indexed lookup time (ms): 3.592
+Full notices-table scan time (ms): 4.409
+
+SQLite query plan:
+[(2, 0, 56, 'SEARCH lsh_buckets USING COVERING INDEX sqlite_autoindex_lsh_buckets_1 (band_no=? AND bucket_hash=?)')]
